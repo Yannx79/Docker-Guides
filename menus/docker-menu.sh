@@ -1,6 +1,7 @@
 #!/bin/bash
 # By: Yannick Funes
 # Datetime: 03/03/2024 23:31
+# https://youtu.be/wIabEU8Zd1g
 
 machine=`who am i | sed "s/^\(.*\)(\(.*\))\(.*\)/\2/" | sed "s/ //g"`
 date=`date +%d/%m/%Y`
