@@ -1,0 +1,29 @@
+services:
+  ubuntu-node:
+    container_name: ubuntu-server
+    image: ubuntu:latest
+    ports:
+      - 9001:9001
+    volumes:
+      - docker-home:/home
+    networks:
+      - master-network
+
+  alpine-node:
+    container_name: alpine-server
+    image: alpine:latest
+    ports:
+      - 9002:9002
+    volumes:
+      - docker-home:/home
+    networks:
+      - master-network
+
+volumes:
+  docker-home:
+  docker-etc:
+
+networks:
+  master-network:
+    name: master-network
+    driver: bridge
