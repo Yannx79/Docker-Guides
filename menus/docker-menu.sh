@@ -1,7 +1,22 @@
 #!/bin/bash
+# By: Yannick Funes
+# Datetime: 03/03/2024 23:31
+
+machine=`who am i | sed "s/^\(.*\)(\(.*\))\(.*\)/\2/" | sed "s/ //g"`
+date=`date +%d/%m/%Y`
+hour=`date +%H:%M:%S`
+server=`logname`
 
 show() {
     clear
+
+    echo "=============================================================="
+    echo "Machine   : $machine"
+    echo "Server    : $server"
+    echo "Date      : $date"
+    echo "Hour      : $hour"
+    echo "=============================================================="
+    echo ""
 
     echo "Main Menu"
     echo "1. Show Images"
@@ -58,6 +73,3 @@ while true; do
     read -p "Press any key to continues ..."
 
 done
-
-
-
