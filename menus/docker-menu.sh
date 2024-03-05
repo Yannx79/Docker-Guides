@@ -56,6 +56,8 @@ while true; do
     show
     get_input
 
+    echo
+    echo "=============================================================="
     case $option in
         1) show_images;;
         2) show_networks;;
